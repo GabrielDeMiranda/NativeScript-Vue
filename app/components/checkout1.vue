@@ -12,7 +12,7 @@
         </ListView>
         <TextField hint="name" v-model="name" />
         <TextField hint="Address" v-model="address" />
-        <Button @tap="submitForm" text="Submit Order" />
+        <Button @tap="submitOrder" text="Submit Order" />
     </StackLayout>
 </template>
 
@@ -45,6 +45,9 @@ export default {
         onItemTap(event) {
             this.$emit("removeProduct", event.item);
         },
+        submitOrder() {
+            alert ("An order is placed by " + this.name + " at " + this.address )
+        }
     },
         resetOrder() {
         this.carts = [];
