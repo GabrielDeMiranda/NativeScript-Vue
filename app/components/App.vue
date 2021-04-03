@@ -50,6 +50,11 @@ export default {
             const count = this.carts.filter(item => item.id === id).length;
             return count;
         },
+        removeFromCart(product) {
+            for (let i=0; i<this.cart.length; i++) {
+                if (this.cart.[i] == product) this.cart.splice(i,1)
+            }
+        }
 
     },
 };
