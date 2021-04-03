@@ -49,6 +49,11 @@ export default {
             alert ("An order is placed by " + this.name + " at " + this.address )
         }
     },
+     removeFromCart(product) {
+            for (let i=0; i<this.cart.length; i++) {
+                if (this.cart[i] == product) this.cart.splice(i,1)
+            }
+        },
         resetOrder() {
         this.carts = [];
         this.order.firstName = null;
