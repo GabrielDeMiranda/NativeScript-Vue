@@ -1,7 +1,7 @@
 <template>
     <StackLayout>
         <Label class="h2 p-10" textWrap="true" :text="sitename" />
-        <ListView for='product in products' @itemTap='onItemTap' > 
+        <ListView for='product in this.products' @itemTap='onItemTap' > 
             <v-template>
                 <StackLayout>
                     <Label :text='product.title' />
@@ -102,7 +102,7 @@ export default {
             });
         },
 
-        addToCart(product) {
+        addProduct(product) {
             const existsProduct = this.carts.find(item => item.title === product.title);
 
             if (!existsProduct) {
