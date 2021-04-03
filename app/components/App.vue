@@ -52,7 +52,7 @@ export default {
         },
         removeFromCart(product) {
             for (let i=0; i<this.cart.length; i++) {
-                if (this.cart.[i] == product) this.cart.splice(i,1)
+                if (this.cart[i] == product) this.cart.splice(i,1)
             }
         }
 
