@@ -83,7 +83,7 @@ export default {
             checkouting: false,
             order: {},
             sitename: "Classes & Activities",
-            carts: []
+            cart: []
     },
         mounted() {
         this.loadProducts();
