@@ -1,13 +1,13 @@
 <template>
-    <Page>
+    <Page style="background-color: azure">
         <ActionBar title="Gab's Classes"/>
         <Label text="Welcome to Gabs Classes" class='h2'/>
         <TabView androidTabsPosition='bottom'>
             <TabViewItem title="Product List" class="h2 text-capitalize">
-                <ProductList @addProduct="addToCart, canAddToCart" />
+                <ProductList @addProduct="addToCart" />
             </TabViewItem>
             <TabViewItem title="Checkout" class="h2 text-capitalize">
-                <Checkout :cart='cart' @removeProduct='removeFromCart'/>
+                <Checkout :cart='cart'/>
             </TabViewItem>
         </TabView>
     </Page>
@@ -59,3 +59,6 @@ export default {
     },
 };
 </script>
+
+<style scoped>
+</style>
